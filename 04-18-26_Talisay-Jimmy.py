@@ -1,9 +1,7 @@
 section_name = input("Class section: ")
 coordinator_name = input("Coordinator name: ")
-
 sports = ["Basketball", "Volleyball", "Badminton", "Chess", "Table Tennis"]
 categories = ["Team", "Team", "Individual", "Individual", "Individual"]
-
 print("\n==========================================")
 print(" INTRAMURALS -- SPORTS EVENTS ")
 print("==========================================")
@@ -11,11 +9,9 @@ print("==========================================")
 for i in range(len(sports)):
     print(str(i + 1) + ". " + sports[i] + "\t[" + categories[i] + "]")
 print("==========================================\n")
-
 logged_games = []
 total_points = 0
 game_num = 1
-
 
 while game_num <= 4:
     print("--- GAME " + str(game_num) + " ---")
@@ -33,11 +29,9 @@ while game_num <= 4:
             points_earned = 0
             if result == "W":
                 points_earned = 3
-
             total_points = total_points + points_earned
             sport_name = sports[sport_choice - 1]
             category_name = categories[sport_choice - 1]
-            
             game_entry = [sport_name, category_name, opponent, result, points_earned]
             logged_games.append(game_entry)
             print("Successfully logged.\n")
